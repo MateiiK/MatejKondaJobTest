@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/shapes"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<ImageButton
+		android:id="@+id/kvadratBtn"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginBottom="8dp"
+		android:background="@android:color/transparent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/kvadrat_btn" />
+	
+	<ImageButton
+		android:id="@+id/circleBtn"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginBottom="15dp"
+		android:background="@android:color/transparent"
+		app:layout_constraintBottom_toTopOf="@+id/kvadratBtn"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="1.0"
+		app:srcCompat="@drawable/krog_btn" />
+	
+	<ImageButton
+		android:id="@+id/trikotnikBtn"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:layout_marginTop="15dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginBottom="32dp"
+		android:background="@android:color/transparent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/kvadratBtn"
+		app:layout_constraintVertical_bias="0.0"
+		app:srcCompat="@drawable/trikotnik_btn" />
+	
+	<ImageView
+		android:id="@+id/kvadrat"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/kvadratBtn"
+		app:layout_constraintStart_toEndOf="@+id/switchView"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/kvadrat" />
+	
+	<ImageView
+		android:id="@+id/trikotnik"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/kvadratBtn"
+		app:layout_constraintStart_toEndOf="@+id/switchView"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/trikotnik" />
+	
+	<ImageView
+		android:id="@+id/circle"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/kvadratBtn"
+		app:layout_constraintStart_toEndOf="@+id/switchView"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/krog" />
+	
+	<Button
+		android:id="@+id/switchView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:text="Switch view"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	<TextView
+		android:id="@+id/procent"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginBottom="8dp"
+		android:text="50%"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<FrameLayout
+		android:layout_width="32dp"
+		android:layout_height="0dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:orientation="vertical"
+		app:layout_constraintBottom_toTopOf="@+id/procent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/switchView">
+		
+		<SeekBar
+			android:id="@+id/size"
+			android:layout_width="250dp"
+			android:layout_height="20dp"
+			android:layout_gravity="center"
+			android:rotation="270" />
+	
+	</FrameLayout>
+</android.support.constraint.ConstraintLayout>
